@@ -7,17 +7,17 @@ public class hours implements Runnable{
     private Calendar time;
     public int hr,mm,sc;
     public String hours;
-    /* public hours(int wake){
-        this.alarm = wake;    
-    } */
     public hours(){
     }
     public void run(){
         hours clock = new hours();
         while (true) {
-        try {  System.out.println(clock.watch());
+        try { clock.watch(); 
                 Thread.sleep(1000);
-                clock.getAlarm(alarm);
+                if (alarm != null) {
+                    clock.getAlarm(alarm);
+                }
+                
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -33,15 +33,14 @@ public class hours implements Runnable{
         this.hours = (hr+":"+mm+":"+sc);
         return hours;
     }
-
     public void getAlarm( String setAlarm){
         this.alarm = setAlarm;
         //System.out.println(alarm +"  "+hr);
-        if (alarm.equals(hours)) {
-            System.out.println("tocou");
+            if (alarm.equals(hours)) {
+                System.out.println("tocou");
+            }
+        
         }
-       
-    }
 
 
 
