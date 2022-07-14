@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class watch {
     public static void main(String[] args) {
         hours thread = new hours();
+
         Thread t1 = new Thread(thread);
         t1.start();
         while (true) {
@@ -16,7 +17,10 @@ public class watch {
                 System.out.print("Nome do alarme:");
                 String nAlarm = new Scanner(System.in).next();
                 thread.setAlarm(hAlarm,nAlarm,0,1); 
+               
+                
             } else {
+                t1.stop();
                 break;
             }    
        }
@@ -30,3 +34,4 @@ public class watch {
        
     }
 }
+
