@@ -22,43 +22,47 @@ public class servidor {
             cS = sS.accept();
             out = new PrintWriter(cS.getOutputStream());
             in = new BufferedReader(new InputStreamReader(cS.getInputStream()));
+            Thread receive = new Thread(new Runnable() {
+                String msg;
+                @Override
+                public void run(){
+                    try {
+                        msg = in.readLine();// leitura dos dados enviados para o clientSocket usando "in"
+                        while (msg != null) {
+                            System.out.println("Cliente: "+msg); // mostra a mensagem enviado do cliente 
+                            msg = in.readLine();
+                        }
+    
+                            System.out.println("Cliente desconectado");
+                            out.close();
+                            cS.close();
+                            sS.close();
+                        } catch (Exception e) {
+                        System.out.println(e);
+                    }
+                }
+            });
+            receive.start();
+            Thread sender = new Thread(new Runnable() {
+                String msg; // variavel q contera oq o usuario escrever 
+                @Override // estou sobrescrevendo o metodo run
+                public void run(){
+                    while(true){
+                        msg = sc.nextLine();//usando  o objeto da classe Scanner para atribuir  a mensagem
+                        out.println(msg);// escreve os dados para o cS(clientSocket)
+                        out.flush();// força o envio dos dados
+                    }
+                    }   
+            });
+            sender.start();
+        
+        
         } catch (IOException e) {
             System.out.println("Erro: "+e);
         }
 
-        Thread sender = new Thread(new Runnable() {
-            String msg; // variavel q contera oq o usuario escrever 
-            @Override // estou sobrescrevendo o metodo run
-            public void run(){
-                while(true){
-                    msg = sc.nextLine();//usando  o objeto da classe Scanner para atribuir  a mensagem
-                    out.println(msg);// escreve os dados para o cS(clientSocket)
-                    out.flush();// força o envio dos dados
-                }
-                }   
-        });
-        sender.start();
+        
     
-        Thread receive = new Thread(new Runnable() {
-            String msg;
-            @Override
-            public void run(){
-                try {
-                    msg = in.readLine();// leitura dos dados enviados para o clientSocket usando "in"
-                    while (msg != null) {
-                        System.out.println("Cliente: "+msg); // mostra a mensagem enviado do cliente 
-                        msg = in.readLine();
-                    }
-
-                        System.out.println("Cliente desconectado");
-                        out.close();
-                        cS.close();
-                        sS.close();
-                    } catch (Exception e) {
-                    System.out.println(e);
-                }
-            }
-        });
-        receive.start();
+      
     }
 }
