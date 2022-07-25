@@ -1,0 +1,4 @@
+Chat entre servido e cliente, usando socket e thread
+#entendi melhor sobre a utilização das thread e do @Override, em questo do socket ainda estou aprendendo, projeto retirado de 
+https://medium.com/nerd-for-tech/create-a-chat-app-with-java-sockets-8449fdaa933 
+não fiz alterações pq estava em duvida de muitos assuntos 
