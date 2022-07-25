@@ -10,31 +10,39 @@ public class thread {
             int i;
             @Override
             public void run(){
-              while(i != 100){
-                System.out.println(i);
-                i= i+1;  
+                while(i != 100){
+                    System.out.println(i);
+                    i= i+1;
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                      
               }
             }
         });
         
-        
-       // Thread.sleep(5000);
-      
         Thread teste2 = new Thread(new Runnable(){
             int i=100               ;
             @Override
             public void run(){
                 while (i != 0) {
-                   
                     System.out.println(i);
                     i=i-1;
+                    try {
+                        Thread.sleep(1000);
+                    } catch (Exception e) {
+                        //TODO: handle exception
+                    }
                 }
             }
         });
         
         teste2.start();
         teste1.start();
-       // Thread.sleep(5000);
+        
  
     }
 }
