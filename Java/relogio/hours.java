@@ -31,6 +31,7 @@ public class hours {
                 while (true) {
                     if (alarm.equals(hr.hours)) {
                     System.out.println("Alarme tocou "+alarm);
+                        alarm = null;
                     
                 }else{
                     System.out.println(alarm+" "+hr.hours) ;
