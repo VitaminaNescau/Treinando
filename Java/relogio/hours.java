@@ -34,7 +34,8 @@ public class hours {
                         alarm = null;
                     
                 }else{
-                    System.out.println(alarm+" "+hr.hours) ;
+                    //teste caso o if não funcione
+                        System.out.println(alarm+" "+hr.hours) ;
                 } 
                 try {
                         Thread.sleep(5000);
