@@ -6,7 +6,7 @@ public class hours {
     private String alarm;
     private Calendar time;
     public int hr,mm,sc;
-    private String hours;
+    public String hours;
     
     public void horas(){
         hours hr = new hours();
