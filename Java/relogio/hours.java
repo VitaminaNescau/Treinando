@@ -1,13 +1,14 @@
 package relogio;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class hours {
-    private String alarm;
+    //private String alarm;
     private Calendar time;
     public int hr,mm,sc;
     public String hours;
-    
+    private ArrayList <String> alarm = new ArrayList<>();
     public void horas(){
         hours hr = new hours();
         Thread hoursTh = new Thread(new Runnable(){
@@ -16,8 +17,10 @@ public class hours {
                 while(true){
                 System.out.println(hr.watch());
                //hr.watch();
+              
+              
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(60000);
                 } catch (InterruptedException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -26,23 +29,24 @@ public class hours {
             }     
         });
         Thread alarmTh = new Thread(new Runnable() {
+            int i;
             @Override
             public void run(){
                 while (true) {
-                    if (alarm.equals(hr.hours)) {
-                    System.out.println("Alarme tocou "+alarm);
-                    
-                }else{
-                    System.out.println(alarm+" "+hr.hours) ;
-                } 
-                try {
-                        Thread.sleep(5000);
-                    } catch (InterruptedException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
+                   // System.out.println(i+" "+ alarm.size());
+                  for (String Alarm : alarm) {
+                        i++;
+                    if (Alarm.equals(hr.hours)) {
+                        System.out.println("Alarme tocou");  
                     }
-                
-            }  
+                    }
+                try {
+
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                   
+                }  
+            } 
             }
         });
         hoursTh.start();
@@ -58,7 +62,9 @@ public class hours {
         return hours;
     }
     public void getAlarm( String setAlarm){
-        this.alarm = setAlarm;
+        String teste = setAlarm;
+        alarm.add(teste);
+
         
     }
 
