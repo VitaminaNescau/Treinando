@@ -1,0 +1,77 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch principal",
+            "request": "launch",
+            "mainClass": "relogio.principal",
+            "projectName": "Java_3b3c0a53"
+        },
+        {
+            "type": "java",
+            "name": "Launch main",
+            "request": "launch",
+            "mainClass": "relogio.main",
+            "projectName": "Java_3b3c0a53"
+        },
+        {
+            "type": "java",
+            "name": "Launch teste",
+            "request": "launch",
+            "mainClass": "relogio.teste",
+            "projectName": "Java_3b3c0a53"
+        },
+        {
+            "type": "java",
+            "name": "Launch thread",
+            "request": "launch",
+            "mainClass": "teste.thread",
+            "projectName": "Java_3b3c0a53"
+        },
+        {
+            "type": "java",
+            "name": "Launch cliente",
+            "request": "launch",
+            "mainClass": "chat.cliente",
+            "projectName": "Java_3b3c0a53"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch servidor",
+            "request": "launch",
+            "mainClass": "chat.servidor",
+            "projectName": "Java_3b3c0a53"
+        },
+        {
+            "type": "java",
+            "name": "Launch teste",
+            "request": "launch",
+            "mainClass": "chat.teste",
+            "projectName": "Java_3b3c0a53"
+        },
+        {
+            "type": "java",
+            "name": "Launch watch",
+            "request": "launch",
+            "mainClass": "relogio.watch",
+            "projectName": "Java_3b3c0a53"
+        },
+        {
+            "type": "java",
+            "name": "Launch vsGit",
+            "request": "launch",
+            "mainClass": "vsGit",
+            "projectName": "Java_3b3c0a53"
+        }
+    ]
+}
