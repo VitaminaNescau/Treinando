@@ -28,7 +28,7 @@ public class hours {
                 }  
               
                 try {
-                    Thread.sleep(30000);
+                    Thread.sleep(60000);
                 } catch (InterruptedException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -41,6 +41,8 @@ public class hours {
             @Override
             public void run(){
                 while (true) {
+                    //alarmOnOf é a verificação se tem algum alarme disponivel
+                    System.out.println(alarmOnOf);
                     if (alarmOnOf) {                                  
                     for (int i = 0; i < alarm.size(); i++) {
                       // System.out.println(alarm.size()+" "+alarm.get(i));
@@ -52,7 +54,7 @@ public class hours {
                 }
                 try {
 
-                    Thread.sleep(30000);
+                    Thread.sleep(10000);
                 } catch (Exception e) {
                    
                 }  
