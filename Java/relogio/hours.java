@@ -6,8 +6,8 @@ import java.util.Calendar;
 public class hours {
     //private String alarm;
     private Calendar time;
-    public int hr,mm,sc;
-    public String hours;
+    private int hr,mm,sc;
+    private String hours;
     private ArrayList <String> alarm = new ArrayList<>();
     private boolean alarmOnOf;
    
@@ -42,7 +42,6 @@ public class hours {
             public void run(){
                 while (true) {
                     //alarmOnOf é a verificação se tem algum alarme disponivel
-                    System.out.println(alarmOnOf);
                     if (alarmOnOf) {                                  
                     for (int i = 0; i < alarm.size(); i++) {
                       // System.out.println(alarm.size()+" "+alarm.get(i));
@@ -61,8 +60,8 @@ public class hours {
             } 
             }
         });
-        hoursTh.start();
-        alarmTh.start();
+        hoursTh.start();//inicializando a thread das horas
+        alarmTh.start();//inicializando a thread do alarme
     }
     // esse metodo recebera os dados da hora
     public String watch(){
@@ -76,7 +75,7 @@ public class hours {
     //esse metodo recebera os possiveis alarmes
     public void getAlarm( String setAlarm){
         String getAlarm = setAlarm;
-        alarm.add(getAlarm);    
+        alarm.add(getAlarm);//como alarm é uma arraylist cada vez q getAlarm for chamado ira adicionar mais um alarme a lista    
     }
 
 
