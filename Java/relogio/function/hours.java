@@ -1,4 +1,4 @@
-package relogio;
+package relogio.function;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -23,6 +23,7 @@ public class hours {
                //hr.watch();
                if (alarm.size()>0) {
                     alarmOnOf = true;
+
                 }else{
                     alarmOnOf = false;
                 }  

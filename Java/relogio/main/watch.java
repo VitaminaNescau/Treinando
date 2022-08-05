@@ -1,6 +1,8 @@
-package relogio;
+package relogio.main;
 
 import java.util.Scanner;
+
+import relogio.function.hours;
 
 public class watch {
     public static void main(String[] args) {

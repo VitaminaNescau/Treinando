@@ -1,4 +1,4 @@
-package relogio;
+package relogio.main;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -10,6 +10,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
+
+import relogio.function.hours;
 
 public class principal {
     public static void main(String[] args) {
