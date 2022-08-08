@@ -1,12 +1,12 @@
 package relogio.function;
 
 public class locale {
-    private String cid;
+    private String city;
 
-    public void setCity(String cid){
-        this.cid = cid;
+    public void setCity(String city){
+        this.city = city;
     }
     public String getCity(){
-        return cid;
+        return city;
     }
 }
