@@ -22,7 +22,7 @@ public class dateANDlocale {
         String key ="dd00af96";
       
         try {
-            URL url = new URL(SITE);
+            URL url = new URL(SITE+key);
             HttpURLConnection con = (HttpURLConnection)url.openConnection();
             if (con.getResponseCode() == 200) {
                 System.out.println("Sucesso "+con.getResponseCode() );
@@ -34,7 +34,7 @@ public class dateANDlocale {
             String JsonString = JSON.Util(json);
             Gson teste = new Gson();
             locale teste1 = teste.fromJson(JsonString, locale.class);
-            System.out.println(teste1.getCity());
+            System.out.println(JsonString);
         }
          catch (Exception e) {
           System.out.println("ERRO: "+e);
