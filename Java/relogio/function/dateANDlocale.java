@@ -34,7 +34,7 @@ public class dateANDlocale {
             String JsonString = JSON.Util(json);
             Gson teste = new Gson();
             locale teste1 = teste.fromJson(JsonString, locale.class);
-            System.out.println(JsonString);
+            System.out.println(teste1.getCity());
         }
          catch (Exception e) {
           System.out.println("ERRO: "+e);
