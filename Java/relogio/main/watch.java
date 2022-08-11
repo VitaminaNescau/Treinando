@@ -2,11 +2,14 @@ package relogio.main;
 
 import java.util.Scanner;
 
+import relogio.function.api;
 import relogio.function.hours;
 
 public class watch {
     public static void main(String[] args) {
         hours watch = new hours();
+        api api = new api();
+        System.out.println(api.acess().getResults().toString());
         watch.horas();
         while (true) {
             System.out.println("Relogio\n1-Alarme\n2-Sair");
