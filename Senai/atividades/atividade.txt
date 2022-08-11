@@ -1,0 +1,206 @@
+1-
+ public class soma {
+    public static void main(String[] args) {
+        Scanner resposta = new Scanner(System.in);
+        System.out.print("Digite o primeiro numero: ");
+        double n1 = resposta.nextDouble();
+        System.out.print("Digite o segundo numero: ");
+        double n2 = resposta.nextDouble();
+        System.out.println("Resultado da soma dos numeros é "+(n1+n2));
+        }
+}
+2-
+ public class operacao {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        //utiliza . em vez de ,
+        Scanner resposta = new Scanner(System.in);
+        System.out.print("Digite o primeiro numero: ");
+        double n1 = resposta.nextDouble();
+        System.out.print("Digite o segundo numero: ");
+        double n2 = resposta.nextDouble();
+        System.out.println("Resultado da soma dos numeros é "+(n1+n2));
+        System.out.println("Resultado da subtração dos numeros é "+(n1-n2));
+        System.out.println("Resultado da multiplicação dos numeros é "+(n1*n2));
+        System.out.println("Resultado da divisão dos numeros é "+(n1/n2));
+    }
+}
+3-
+ public class consumo {
+    public static void main(String[] args) {
+        Scanner resposta = new Scanner(System.in);
+        System.out.print("Digite a distancia total percorrida: ");
+        double d = resposta.nextDouble();
+        System.out.print("Digite o total de combustivel gasto: ");
+        double c = resposta.nextDouble();
+        System.out.println("O consumo médio do automóvel é: "+(d/c));
+    }
+}
+4-
+ public class venda {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner resposta = new Scanner(System.in);
+        System.out.print("Nome: ");
+        String n = resposta.nextLine();
+        System.out.print("Salario: ");
+        double s = resposta.nextDouble();
+        System.out.print("Total de vendas: ");
+        double v = resposta.nextDouble();
+        double p = 0.15;//15%
+        double sF= s+(v*p);
+        System.out.println("Nome: "+n+"\nSalário fixo: "+s+"\nSalário final: "+sF);
+
+    }
+}
+5-
+ public class aluno {
+    public static void main(String[] args) {
+        Scanner resposta = new Scanner(System.in);
+        System.out.print("Nome do aluno: ");
+        String n = resposta.nextLine();
+        System.out.print("Nota 1: ");
+        double n1 = resposta.nextDouble();
+        System.out.print("Nota 2: ");
+        double n2 = resposta.nextDouble();    
+        System.out.print("Nota 3: ");
+        double n3 = resposta.nextDouble();
+        double m = (n1+n2+n3)/3;
+        System.out.println("Nome do aluno: "+n+"\nMédia: "+(String.format("%.2f",m)));
+        //String.format para limitar em 2 casas decimais
+    }
+}
+6-
+ public class troca {
+    public static void main(String[] args) {
+        int a,b,r;
+        System.out.print("De uma valor para variavel A: ");
+        a = new Scanner(System.in).nextInt();
+        System.out.print("De uma valor para variavel B: ");
+        b = new Scanner(System.in).nextInt();
+        r = a;
+        a = b;
+        b = r;
+        System.out.println("A: "+a+" "+"B: "+b);
+
+    }
+}
+7-
+ public class temperatura {
+    public static void main(String[] args) {
+        System.out.println("Digite a temperaturam em graus Celsius: ");
+        double c = new Scanner(System.in).nextDouble();
+        double f = (9*c+160) / 5;
+        System.out.println("A temperatura em Fahrenheit: "+(String.format("%.2f", f)));
+    }  
+}
+8-
+ public class converco {
+    public static void main(String[] args) {
+        Scanner resposta = new Scanner(System.in);
+        System.out.println("Dolar hoje: ");
+        double dH = resposta.nextDouble();
+        System.out.println("Dolar na carteira: ");
+        double dC = resposta.nextDouble();
+        dC = dC*dH;
+        System.out.println(String.format("%.2f", dC));
+    }
+}
+9-
+ public class juros {
+    public static void main(String[] args) {
+        System.out.println("Valor de depoisto: ");
+        double d = new Scanner(System.in).nextDouble();
+        double j = 0.007;//0,70%, juros fixo
+        double jM = d*j;
+        System.out.println("Rendimento: "+(d+jM));
+    }
+}
+10-
+ public class loja {
+    public static void main(String[] args) {
+        System.out.println("Valor da compra: ");
+        double c = new Scanner(System.in).nextDouble();
+        //utilizei vetor para armazenamento das parcelas
+        double p[] ={(c/1),(c/2),(c/3),(c/4),(c/5)};
+       for (int i =0; i<p.length;i++) {
+         System.out.println("Parcela "+(i+1)+"x: "+String.format("%.2f",p[i]));
+       } 
+       
+    }
+}
+11-
+ public class custo {
+    public static void main(String[] args) {
+        System.out.print("Custo do produto: ");
+        double c = new Scanner(System.in).nextDouble();
+        System.out.print("Porcentagem de ganho: ");
+        double p = new Scanner(System.in).nextDouble();
+        p = p/100;
+        double v = c+(c*p);
+        System.out.println("Venda : "+v);
+    }
+}
+12-
+ public class raio {
+    public static void main(String[] args) {
+        System.out.println("Digite o raio do circulo em metros: ");
+        double r = new Scanner(System.in).nextDouble();
+        double c = Math.PI*(r*r);
+        System.out.println("A área do circulo: "+String.format("%.2f", c)+" m");
+    }
+}
+13-
+ public class caso {
+    public static void main(String[] args) {
+        System.out.print("Digite um numero: ");
+        int n = new Scanner(System.in).nextInt();
+        if (n>20) {
+            System.out.println(n);
+        } else if(n==20) {
+            System.out.println("Numero igual a 20");
+        }else{
+            System.out.println("Numero menor que 20");
+        }
+    }
+}
+14-
+  public static void main(String[] args) {
+        Scanner resposta = new Scanner(System.in);
+        System.out.print("Digite um numero:");
+        int n1 = resposta.nextInt();
+        System.out.println("Digite outro numero");
+        int n2 = resposta.nextInt();
+        if (n1>n2) {
+            System.out.println(n2);
+        } else {
+           System.out.println(n1); 
+        }
+}
+15-
+ public class decrescente {
+    public static void main(String[] args) {
+            Scanner resposta = new Scanner(System.in);
+            boolean r= true;
+            while (r) {
+            System.out.print("Digite um numero:");
+            int n1 = resposta.nextInt();
+            System.out.print("Digite outro numero:");
+            int n2 = resposta.nextInt();
+            if (n1==n2) {
+                System.out.println("Numeros iguais, digite outro numero.");
+                
+            } else {
+                if (n1>n2) {
+                    System.out.println(n1+"\n"+n2);
+                    r = false;
+                } else {
+                    System.out.println(n2+"\n"+n1);
+                    r = false;
+                }
+            }
+        }
+            
+        }   
+}
+

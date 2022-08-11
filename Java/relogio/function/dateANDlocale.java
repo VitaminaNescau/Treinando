@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.Inet4Address;
 import java.net.URL;
 import com.google.gson.Gson;
 
@@ -19,11 +20,10 @@ public class dateANDlocale {
     }
     //metodo que consome a api
     public void acess(){
-        String SITE = "https://api.hgbrasil.com/weather?format=json&key="; 
-        String key ="dd00af96";
-      
         try {
-            URL url = new URL(SITE+key);
+            String key ="dd00af96";
+            String site = "https://api.hgbrasil.com/weather?key="+key+"&user_ip=remote";
+            URL url = new URL(site);
             HttpURLConnection con = (HttpURLConnection) /*pq o http esta em parentese e não como new?*/url.openConnection();
             if (con.getResponseCode() == 200) {
                 System.out.println("Sucesso "+con.getResponseCode() );
@@ -34,9 +34,10 @@ public class dateANDlocale {
             BufferedReader json = new BufferedReader(new InputStreamReader(con.getInputStream()));
             dateANDlocale JSON = new dateANDlocale();
             String JsonString = JSON.Util(json);
-            Gson teste = new Gson();
-            locale teste1 = teste.fromJson(JsonString, locale.class);
-            System.out.println(teste1.getCity());
+            Gson gson = new Gson();
+            locale locale = gson.fromJson(JsonString, locale.class);
+           
+            System.out.println(locale.getResults().toString());
         }
          catch (Exception e) {
           System.out.println("ERRO: "+e);
