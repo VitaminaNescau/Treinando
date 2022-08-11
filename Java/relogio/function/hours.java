@@ -64,7 +64,7 @@ public class hours {
         hoursTh.start();//inicializando a thread das horas
         alarmTh.start();//inicializando a thread do alarme
     }
-    // esse metodo recebera os dados da hora
+    // esse metodo recebera os dados da hora do sistema
     public String watch(){
         time = Calendar.getInstance();
         hr = time.get(Calendar.HOUR_OF_DAY);
