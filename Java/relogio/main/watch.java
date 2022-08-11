@@ -9,9 +9,10 @@ public class watch {
     public static void main(String[] args) {
         hours watch = new hours();
         api api = new api();
-        System.out.println(api.acess().getResults().toString());
+        
         watch.horas();
         while (true) {
+            System.out.println(api.acess().getResults().toString());
             System.out.println("Relogio\n1-Alarme\n2-Sair");
             int resposta = new Scanner(System.in).nextInt();
             if (resposta == 1) {
