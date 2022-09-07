@@ -1,0 +1,214 @@
+public class atv1 {
+
+	public static void main(String[] args) {
+			int n = 0;
+			do {
+				System.out.println(n);
+				n++;
+			} while (n!=101);
+			}
+
+		
+
+	}
+public class atv2 {
+
+	public static void main(String[] args) {
+		for (int i = 100;i>=0;i--) {
+			if (i%2==0) {
+				System.out.println(i);
+			}	
+		}
+	}
+}
+public class atv3 {
+
+	public static void main(String[] args) {
+		for (int i = 0; i <= 500;i++) {
+			if ( i%5 == 0) {
+				System.out.println(i);
+			}
+		}
+	}
+}
+
+public class atv4 {
+
+	public static void main(String[] args) {
+		Scanner r = new Scanner(System.in);
+		for (int i = 0; i <=20;i++) {
+			System.out.print("Nome: ");
+			String nome = r.next();
+			System.out.println("Sexo: ");
+			String sexo = r.next();
+			System.out.print("Idade: ");
+			int idade = r.nextInt();
+			if(idade > 20 && sexo.equals("M") || sexo.equals("m")) {
+				System.err.println("teste");
+				System.out.println(nome);
+			}
+		}
+		r.close();
+		
+
+	}
+}
+public class atv5 {
+    public static void main(String[] args) {
+        int aux = 0;
+        Scanner r = new Scanner(System.in);
+        System.out.print("Digite um numero: ");
+        int n1 = r.nextInt();
+        System.out.print("Outro numero:");
+        int n2 = r.nextInt();
+        if (n1>n2) {
+            while(n2>0){
+                n2--;
+                aux = n1+aux;
+            }
+        } else {
+            while(n1>0){
+                n1--;
+                aux = n2+aux;
+            }
+        }   System.out.println(aux);
+    }
+}
+public class atv6 {
+    public static void main(String[] args) {
+        double n1 = 1, n2 = 0;
+        for (int i = 0; i <=20; i++) {
+            n1= n1+n2;
+            n2= n1-n2;
+            System.out.println(n1);
+        }
+        
+        
+    }
+}
+
+public class atv7 {
+    public static void main(String[] args) {
+        double media= 0;
+         Scanner r = new Scanner(System.in);    
+         int i = 0 ;
+        while (i <= 3) {
+            
+         
+         System.out.print("Nome: ");
+        String nome = r.next();
+        System.out.print("Nota 1: ");
+        double n1 = r.nextDouble();
+        System.out.println("Nota 2: ");
+        double n2 = r.nextDouble();
+        double m = (n2+n1)/2;
+        media = m+media;
+        i++;
+         }
+        System.out.println(String.format("%.2f", (media/15)) ); 
+    }
+}
+public class atv8 {
+    public static void main(String[] args) {
+        Scanner r = new Scanner(System.in);
+        int b=0,v=0,c=0,f=0,o=0,l=0,s=0,t=0;
+        double aux=0;
+       while (true) {
+        System.out.println("Qual é seu time favorito:\n1-Bahia\n2-Vitória\n3-Corinthians\n4-Flamengo\n5-Outros");
+        int time = r.nextInt();
+        switch (time) {
+            case 1:
+                b++;
+                break;
+            case 2:
+                v++;
+            break;
+            case 3:
+                c++;
+            break;
+            case 4:
+                f++;
+            break;
+            case 5:
+                o++;
+            break;
+            default:
+                break;
+
+        }
+        if (time==0) {
+            break;
+        }
+        System.out.print("Onde você mora:\n1-Salvador\n2-Lauro de freitas\n3-Outros");
+        int cid = r.nextInt();
+        if (cid == 2) {
+                l++;
+            }
+        if(cid == 1 && time == 2) {
+            t++;
+        }
+        System.out.print("Qual o seu salário: ");
+        double sal = r.nextDouble();
+        if (time == 1) {
+            aux= sal+aux;
+            
+        }
+       System.out.println("Encerrar pesquisa(1-sim/2-não): ");
+       int e = r.nextInt();
+       if (e==1) {
+        System.out.println(l+" "+aux+""+t);
+        break;
+       }
+        
+    }
+}
+}
+public class atv9 {
+    public static void main(String[] args) {
+        double rP,rF,tA,tD;
+        int a = 0;
+        Scanner r = new Scanner(System.in);
+        while (true) {
+            System.out.print("Renda pessoal: ");
+            rP = r.nextDouble();
+            System.out.print("Renda familiar: ");
+            rF = r.nextDouble();
+            System.out.print("Total gasto com alimentos: ");
+            tA = r.nextDouble();
+            System.out.print("Total gasto com despesas: ");
+            tD = r.nextDouble();
+            if(rP >200 | rF>200 | tA>200 | tD>200){
+                a++;
+
+            }
+        }
+
+    }
+}
+public class atv10 {
+    public static void main(String[] args) {
+       int c,c4=0,c5=0;
+       
+        while (true) {
+            System.out.println("Digite o canal:");
+            c = new Scanner(System.in).nextInt();
+            switch (c) {
+                case 4:
+                    c4++;
+                    break;
+                case 5:
+                    c5++;
+                    break;
+                default:
+                if (c4>c5) {
+                    System.out.println("Canal 4 foi o mais assitido");
+                         } else {
+                         System.out.println("Canal 5 foi o mais assitido");
+    }
+                    break;
+            }      
+        }
+        
+    }
+}
+
