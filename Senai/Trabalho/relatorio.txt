@@ -1,0 +1,3 @@
+login de acesso ao caixa:✓
+cada conta com saque/saldo/deposito:✓
+se eu por movimentação como metodo nos membros?
