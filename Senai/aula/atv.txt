@@ -1,0 +1,93 @@
+package aula;
+
+import java.util.Scanner;
+
+import geometry.cal_C;
+
+public class geometria {
+
+	public static void main(String[] args) {
+		cal_C C = new cal_C();
+		System.out.println("Qual geometria quer calcular:\n1-Circulo\n2-Quadrado\n3-Triangulo");
+		int r = new Scanner(System.in).nextInt();
+		switch (r) {
+		case 1:
+			System.out.print("Qual o raio do circulo:");
+			double raio= new Scanner(System.in).nextDouble();
+			System.out.println(C.getC(raio));
+			System.out.println(C.getCp(raio));
+			
+			break;
+		case 2:
+			System.out.print("Digite a base do quadrado:");
+			double baseR = new Scanner(System.in).nextDouble();
+			System.out.print("Digite a altura do quadrado:");
+			double alturaR = new Scanner(System.in).nextDouble();
+			System.out.println(C.getR(baseR, alturaR));
+			System.out.println(C.getRp(baseR, alturaR));
+			break;
+		case 3:
+			System.out.print("Digite a base do quadrado:");
+			double baseT = new Scanner(System.in).nextDouble();
+			System.out.print("Digite a altura do quadrado:");
+			double alturaT = new Scanner(System.in).nextDouble();
+			System.out.println(C.getT(baseT, alturaT));
+			System.out.println(C.getTp(baseT, alturaT));
+
+			break;
+
+		default:
+			System.out.println("Digitou errado");
+			break;
+		}
+		
+		
+		
+
+	}
+
+}
+package geometry;
+
+public class cal_C {
+	public double area,perimetro;
+	final double pi = 3.14;
+	public double raio;
+	public double base;
+	public double altura;
+	
+	public double getC(double r) {
+	raio = r;
+	area = pi *(raio*raio);
+	
+	return area;
+	}
+	public double getCp(double r) {
+		double c = 2* pi* r;
+		return perimetro;
+	}
+	public double getR(double b,double a) {
+		base = b;
+		altura = a;
+		area = base * altura;
+		return area;
+		
+	}
+	public double getRp(double b ,double a) {
+		perimetro = (b*2)+(a*2);
+		return perimetro;
+	}
+	
+	public double getT(double b,double a) {
+		// sem atribuir os parametros a uma variavel 
+		area = (b*a)/2;
+		return area;
+	}
+	public double getTp(double b,double a) {
+		double area = getT(b, a);
+		perimetro = Math.sqrt(area)*3;
+		return perimetro;
+	}
+
+}
+
