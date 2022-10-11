@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 import Senai.Trabalho2_0.funcoes.money;
 
-public class vitor {
+public class davi {
     double saldo,nSaldo,saque;
     String id;
     money m = new money();
     public String getId(){
-       id = "Vitor";
+       id = "Davi";
         return id;
     }
     public double getSaldo(){

@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 import Senai.Trabalho2_0.funcoes.money;
 
-public class vitor {
+public class douglas {
     double saldo,nSaldo,saque;
     String id;
     money m = new money();
     public String getId(){
-       id = "Vitor";
+       id = "Douglas";
         return id;
     }
     public double getSaldo(){
@@ -23,7 +23,7 @@ public class vitor {
         return nSaldo;
     }
     public double saque(double s){
-        if (s<=saldo && s>0)  {
+        if (s<=saldo && s>0 && s<=328)  {
             saque = s;
             saldo = saldo - saque;
             System.out.println("Organizando notas");
