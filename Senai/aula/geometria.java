@@ -1,8 +1,8 @@
-package aula;
+package Senai.aula;
 
 import java.util.Scanner;
 
-import geometry.cal_C;
+import Senai.geometry.cal_C;
 
 public class geometria {
 

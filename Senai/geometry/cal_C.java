@@ -1,4 +1,4 @@
-package geometry;
+package Senai.geometry;
 
 public class cal_C {
 	public double area,perimetro;

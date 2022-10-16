@@ -1,0 +1,267 @@
+Atv1 
+public class Atv1 {
+    
+    public static void main(String[] args) {
+        for (int p =0; p<=100; p++) {
+             System.out.println(p); 
+        }
+    }
+}
+Atv2
+public class Atv2 {
+    
+    public static void main(String[] args) {
+        for(int n = 100; n <= 1; n++) {
+            System.out.println(n);
+        }
+    }
+
+}
+Atv3
+public class Atv3 {
+    public static void main(String[] args) {
+        for (int i=1; i<=500; i++){
+            if(i % 5 ==0){
+                System.out.println(i);
+            }
+            
+            }
+        }
+    
+}
+Atv4
+public class Atv4 {
+   
+    public static void main (String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+
+    int sexo, i, idade;
+    String nome;
+
+
+    for (i = 0; i<=2; i++) {
+
+        System.out.println("Qual nome? ");
+        nome=sc.nextLine();
+        sc.nextLine();
+
+        System.out.println("Qual idade? ");
+        idade=sc.nextInt();
+
+        System.out.println("Qualo sexo? 1 para masculino 2 para feminino");
+        sexo=sc.nextInt();
+
+        
+        if(idade>21 && sexo==1) {
+            System.out.println("Nome:"+ nome + " idade "+idade);
+        }else
+           System.out.println("Não escolhido");
+
+        
+        } 
+
+
+        sc.close();
+      } 
+    
+}
+Atv5
+public class Atv5 {
+    public static void main(String[] args) {
+      int aux = 0;
+      Scanner s = new Scanner(System.in);
+      System.out.printf("Digite um numero: ");
+      int n1 = s.nextInt();
+      System.out.printf("Digite outro numero: ");
+      int n2 = s.nextInt();
+      if (n1>n2) {
+        while(n2>0) {
+        n2--;
+        aux = n1+aux;
+
+        }
+    } else {
+        while(n1>0){
+            n1--;
+            aux = n2+aux;
+        }
+     
+    }   System.out.println(aux);
+    }
+   
+}
+Atv6
+public class Atv6 {
+   public static void main(String[]args){
+    double n1 = 1, n2 = 0;
+    for (int o = 0; o<=20; o++){
+        n1 = n1+n2;
+        n2 = n1-n2;
+        System.out.println(n1);
+        
+    }
+   } 
+}
+Atv7
+public class Atv7 {
+    public static void main(String[] args) {
+        double media= 0;
+        Scanner a = new Scanner(System.in);
+        int o = 0;
+        while(o<= 3){
+        System.out.print("Nome: ");
+        String nome = a.next();
+        System.out.print("Nota 1: ");
+        double n1 = a.nextDouble();
+        System.out.println("Nota 2: ");
+        double n2 = a.nextDouble();
+        double m = (n2+n1)/2;
+        media = m+media;
+        o++;
+        }
+        System.out.println(String.format("%.2f", (media/15)) );
+
+        }
+    }
+Atv8
+  public class Atv8 {
+    public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int tm, mr = 0, b1 = 0, vit = 0, cr = 0, fla = 0, ot = 0, pfr = 0, nmrvs = 0;
+		float mds = 0.0f;
+		do {
+			System.out.print("\nQual o seu time do coracao? ");
+			System.out.println("\n1- Bahia: ");
+			System.out.println("2- Vitoria: ");
+			System.out.println("3- Corinthians: ");
+			System.out.println("4- Flamengo: ");
+			System.out.println("5- Outros: ");
+			System.out.println("0- Para sair: ");
+			tm = sc.nextInt();
+			if (tm == 0) {
+			} else {
+				switch (tm) {
+				case 1:
+					b1 = b1 + 1;
+					break;
+				case 2:
+					vit = vit + 1;
+					break;
+				case 3:
+					cr = cr + 1;
+					break;
+				case 4:
+					fla = fla + 1;
+					break;
+				case 5:
+					ot = ot + 1;
+					break;
+				}
+				System.out.print("\nOnde voce mora? ");
+				System.out.print("1- Salvador: ");
+				System.out.print("2- Lauro de Freitas: ");
+				System.out.print("3- Outros: ");
+				mr = sc.nextInt();
+				if (mr == 2) {
+					pfr++;
+				}
+				if (mr > 3 || mr < 1) {
+					System.out.println("Opcao Invalida: ");
+
+				} else {
+					System.out.print("\nQual o seu salario? ");
+					String sl = sc.next().replaceAll(",", ".");
+					float sl1 = Float.parseFloat(sl);
+					if (tm == 1) {
+
+						mds = sl1 / b1;
+
+					}
+				}
+
+			}
+			if (tm == 2 && mr == 1) {
+				nmrvs++;
+			}
+		} while (tm != 0);
+
+		if (b1 > 0) {
+			System.out.println(" Torcedores do Bahia: " + b1);
+		}
+		if (vit > 0) {
+			System.out.println(" Torcedores do Vitoria: " + vit);
+		}
+		if (cr > 0) {
+			System.out.println(" Torcedores do Corinthians: " + cr);
+		}
+		if (fla > 0) {
+			System.out.println(" Torcedores do Flamengo: " + fla);
+		}
+		if (ot > 0) {
+			System.out.println(" Torcedores de outros clubes: " + ot);
+		}
+
+		if (b1 > 0) {
+			System.out.println(" Media Salarial dos torcedores do bahia: R$ " + mds);
+		}
+		if (mr ==2) {
+			System.out.println(" Pessoas de Lauro de freitas: " + pfr);
+		}
+
+		if (vit > 0 && mr == 1)
+			System.out.println(" Pessoas de Salvador torcedoras do vitoria : " + nmrvs);
+		sc.close();
+
+	}
+}
+Atv9
+  public class Atv9 {
+    public static void main(String[] args) {
+        double rP,rF,tA,tD;
+        int a = 0;
+        Scanner r = new Scanner(System.in);
+        while (true) {
+            System.out.print("Renda pessoal: ");
+            rP = r.nextDouble();
+            System.out.print("Renda familiar: ");
+            rF = r.nextDouble();
+            System.out.print("Total gasto com alimentos: ");
+            tA = r.nextDouble();
+            System.out.print("Total gasto com despesas: ");
+            tD = r.nextDouble();
+            if(rP >200 | rF>200 | tA>200 | tD>200){
+                a++;
+
+            }
+        }
+
+    }
+}
+Atv10
+public class Atv10 {
+    public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		float i = 0, cn, aux = 0, nps = 0;
+		do {
+			System.out.print("\nDigite o numero do canal: ");
+			cn = sc.nextFloat();
+
+			if (cn == 0) {
+			} else {
+				System.out.print("Digite o numero de pessoas que estavam assistindo: ");
+				nps = sc.nextFloat();
+
+				if (cn == cn) {
+					aux++;
+					i = cn;
+				}
+			}
+			System.out.println("Canal: " + i );		}
+ while (cn != 0);
+		System.out.println( "\n Porcentagem de pessoas " + (aux * nps) / 100 + " %");
+
+sc.close();
+
+	}
+}

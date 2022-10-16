@@ -25,13 +25,5 @@ public class watch {
                 System.out.println("Comando Invalido");
             }
        }
-       
-       
-        
-
-       
-       
-        // hours thread2 = new hours( teste = 3);
-       
     }
 }

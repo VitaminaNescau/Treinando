@@ -15,23 +15,21 @@ import relogio.function.hours;
 
 public class principal {
     public static void main(String[] args) {
-        ImageIcon image = new ImageIcon("relogio/teste.png");
         hours time = new hours();
         time.horas();
         JFrame frame = new JFrame("Relogio");
-        frame.setSize(400,400);
+        frame.setSize(400,200);
+        frame.setResizable(false);
         JLabel texto = new JLabel();
         JPanel painel = new JPanel();
-        JButton button = new JButton("Teste");
+        JButton button = new JButton("Alarme");
        // painel.setBackground(Color.BLACK);
-        texto.setIcon(image);
         frame.getContentPane();
         Dimension size = texto.getPreferredSize();
         texto.setBounds(0 ,1,size.width,size.height);
-        button.setBounds(180, 150, 70, 30);
+        button.setBounds(20, 145, 100, 15);
         painel.setLayout(null);
         painel.add(button);
-        painel.add(texto);
         frame.add(painel);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);

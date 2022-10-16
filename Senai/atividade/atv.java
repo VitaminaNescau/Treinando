@@ -1,4 +1,4 @@
-package Senai.atividades3;
+package Senai.atividade;
 
 public class atv {
     static double[] fibo = new double[21]; 

@@ -11,6 +11,9 @@ public abstract class money {
         return saldo;
     }
 
+    public static void contaM(double saque) {
+    }
+
 
 
 }

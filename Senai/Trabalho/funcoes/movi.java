@@ -2,27 +2,31 @@ package Senai.Trabalho.funcoes;
 
 import java.util.Scanner;
 
-import Senai.Trabalho.membros.f1;
-import Senai.Trabalho.membros.family;
+import Senai.Trabalho.membros.*;
 
-public class movi{
-    family user;
+import Senai.Trabalho.principal.account;
+
+public class movi extends account{
+    f1 f1;
+    f2 f2;
     
     public void movimenta(){
+        teste();
+      for (int i = 0; i <= login_p.size(); i++) {
         
-        System.out.println("1 - Saques\n2 - Deposito");
-        int t = new Scanner(System.in).nextInt();
-        switch (t) {
-            case 1://to chegando perto
-                System.out.print("Saldo da conta:"+ user.vitor.getSaldo());
-                break;
-            case 2: 
-                break;
+        System.out.println("chegou aq");
+        //System.out.println(f1.id());
         
-            default:
-                break;
+        if (login_p.get(i).equals(f1.id())) {
+            f1.movimenta();
+            break;
         }
-    }
+        if (login_p.get(i).equals(f2.id())) {
+            f2.movimenta();
+            break;
+        }  
+      }
     //public family
     
+}
 }

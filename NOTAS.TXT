@@ -1,0 +1,3 @@
+se eu contabilizar a quantidade de notas e verificar se o valor do saque é menor q o saldo das notas 
+50 x 20 =1000+400+200+40
+1640

@@ -2,12 +2,12 @@ package Senai.Trabalho.membros;
 
 import java.util.Scanner;
 
-public class f1{
+public class f4 {
     private double saldo,nSaldo,dP;
-    private  String id;
+    private String id;
     
-    public  String id(){
-        id = "vitor";
+    public String id(){
+        id = "carol";
         return id;
     }
 
@@ -34,12 +34,12 @@ public class f1{
     }
 
     public void movimenta(){
-        System.out.println("Bem vindo "+id);
+        
         System.out.println("1 - Saques\n2 - Deposito");
         int t = new Scanner(System.in).nextInt();
         switch (t) {
             case 1:
-                System.out.print("Saldo da conta:"+ getSaldo());
+                System.out.print("Saldo da conta:");
                 break;
             case 2: 
                 break;
@@ -49,3 +49,4 @@ public class f1{
         }
     }
 }
+

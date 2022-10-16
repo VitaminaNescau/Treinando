@@ -8,22 +8,22 @@ public class money {
     public void contaM(double v) {
         
         //valor do saque
-       final int contN = 20;
-
         valor = v;
         
             
         
         //notas de 50
         if(valor2 < valor){
+            
             while (valor2 < valor){
-                if (notas50 <= contN) {
+                if (notas50 <= 20) {
                     valor2 += 50;
                 notas50++;
-                }else{
+                System.out.println(notas50);
+            }else{
                  //variavel com a quatidade de notas
-                System.out.println("passou de 20");
-                    break;}
+                System.out.println("passou de 20 notas ");
+                }
             }
             if  (valor2 > valor){
                 valor2 -=50;
