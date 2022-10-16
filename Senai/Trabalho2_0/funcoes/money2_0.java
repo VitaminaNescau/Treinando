@@ -7,11 +7,11 @@ public class money2_0 {
         money2_0 m = new money2_0();
        // System.out.println(m.contagem(150));
        //while (true) {
-        if (m.contagem(1642).equals("Sem saldo no caixa")){// teste aleatorio, quero apenas o resultado do else
+        if (m.contagem(0).equals("Sem saldo no caixa")){// teste aleatorio, quero apenas o resultado do else
            // break;
            System.out.println("n");
         }else{
-            System.out.println(m.contagem(1642));
+            System.out.println(m.contagem(139));
             // saque sera efetuado com numeros pares
             
         }
@@ -23,7 +23,7 @@ public class money2_0 {
     public String contagem(double v){
        valor = v;// valor do saque
        // esse valor é pra verificar o saldo do caixa
-            if (valorN > maxS | valor> maxS) {
+            if (valorN > maxS || valor> maxS) {
             return "Sem saldo no caixa";//caso o saldo do saque seja maior q o saldo atual do caixa
        }
         if(valor2 < valor){// caso valor(saque) seja maior q valor2(teste para verificar quantas notas são necessarias de tal valor )
