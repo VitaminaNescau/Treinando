@@ -2,22 +2,28 @@ package Senai.Trabalho2_0.funcoes;
 
 public class money2_0 {
     double valor, valor2, valorN,maxS = 1642;
-    int  notas50 , notas20, notas10, notas2;
+    int  mon,notas50 , notas20, notas10, notas2;
     public static void main(String[] args) {
         money2_0 m = new money2_0();
+        
        // System.out.println(m.contagem(150));
-       //while (true) {
-        if (m.contagem(0).equals("Sem saldo no caixa")){// teste aleatorio, quero apenas o resultado do else
-           // break;
+    while (true) {
+        
+   
+        if (m.contagem(m.mon).equals("Sem saldo no caixa")){// teste aleatorio, quero apenas o resultado do else
+           
            System.out.println("n");
+        break;
         }else{
-            System.out.println(m.contagem(139));
+            System.out.println(m.valor);
+            System.out.println(m.contagem(m.mon));
             // saque sera efetuado com numeros pares
+          m.mon+=100;
             
         }
        
         
-       //} 
+     }
        
     }
     public String contagem(double v){
@@ -34,11 +40,10 @@ public class money2_0 {
                     valorN = valorN+ 50;
                    // System.out.println(notas50);
                 }else{
-                    //System.out.println("passou de 20 notas de 50");
-                   // System.out.println(notas50);
+                    System.out.println("break notas de 50");
                     break;
                 }
-            } if (valor2 > valor) {
+            } if (valor2 > valor && notas50 < 20) {
                 valor2 -= 50;
                 notas50--;
                 valorN = valorN - 50;
@@ -68,7 +73,7 @@ public class money2_0 {
                 if (notas10<20) {
                      valor2 += 10;
                     notas10++; 
-                    valorN = valorN +10;
+                    valorN = valorN + 10;
                 }else{
                    // System.out.println("passou de 20 notas de 10");
                     // System.out.println(notas10);
