@@ -1,0 +1,4 @@
+id tem prioridade sobre uma class
+usar a semantica do html no css tambem tem preferencia sobre o uso de uma classe ou id dessa semantica
+Dica: usar um "conteiner" e por os elementos dentro dela
+toda semantica é uma div e div é generico(usar div caso não haja opção para oq for desejado)
