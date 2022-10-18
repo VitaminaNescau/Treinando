@@ -8,22 +8,20 @@ public class caixa{
   
     public static void main(String[] args) {
         login l = new login();
-        adm teste = new adm();
-         boolean repet = teste.control();
+        adm ad = new adm();
+         boolean repet = ad.control();
         while (repet) {
         System.out.print("Caixa\nLogin:");
         String log = new Scanner(System.in).next();
         if (l.getLogin(log)) {
-            System.out.println("Passou");
-           l.setUser();
-        } else {
+            System.out.println("");
+             l.setUser();
+        } else if (log.equals(ad.id())){
+            repet = ad.control();
+        }else {
             System.out.println("não passou");
 
-    }
-   
-    
-
-
+    } 
     }
 }
 }

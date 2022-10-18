@@ -2,12 +2,13 @@ package Senai.Trabalho2_0.funcoes.membros;
 
 import java.util.Scanner;
 
-import Senai.Trabalho2_0.funcoes.money;
+
+import Senai.Trabalho2_0.funcoes.money2_0;
 
 public class douglas {
     double saldo,nSaldo,saque;
     String id;
-    money m = new money();
+    money2_0 m = new money2_0();
     public String getId(){
        id = "Douglas";
         return id;
@@ -22,18 +23,25 @@ public class douglas {
         System.out.println("Deposito de "+nSaldo+" feito com sucesso");
         return nSaldo;
     }
-    public double saque(double s){
-        if (s<=saldo && s>0 && s<=328)  {
+    public String saque(double s){
+        if (s<=saldo && s>0)  {
             saque = s;
-            saldo = saldo - saque;
-            System.out.println("Organizando notas");
-            m.contaM(saque);
-            System.out.println("Saque de "+ s +"efetuado");
-        } else {
-            System.out.println("Saque negado");
-        }
-        return saque;
-    } 
+            
+            if (money2_0.valorN >= money2_0.maxS) {
+                System.out.println("Sem saldo no caixa");
+                return "Sem saldo no caixa";
+            } else {
+               
+                System.out.println("Organizando notas");
+                System.out.println(money2_0.contagem(saque));
+                saldo = saldo - saque;
+                System.out.println("Saque de "+ saque +"efetuado"); 
+            }
+         }else{
+            System.out.println("Saldo inferior ao saque");
+         }
+         return ""+saque;
+}
   
     public void movi(){
        boolean repet = true;

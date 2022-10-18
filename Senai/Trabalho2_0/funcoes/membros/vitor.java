@@ -8,7 +8,7 @@ import Senai.Trabalho2_0.funcoes.money2_0;
 public class vitor {
     double saldo,nSaldo,saque;
     String id;
-    money2_0 m = new money2_0();
+   // money2_0 m = new money2_0();
     public String getId(){
        id = "Vitor";
         return id;
@@ -26,15 +26,16 @@ public class vitor {
     public String saque(double s){
         if (s<=saldo && s>0)  {
             saque = s;
-            saldo = saldo - saque;
-            if (m.contagem(saque).equals("Sem Saldo no caixa")) {
+            
+            if ((money2_0.valorN + saque)>= money2_0.maxS) {
+                System.out.println("Sem saldo no caixa");
                 return "Sem saldo no caixa";
             } else {
+               
                 System.out.println("Organizando notas");
-                System.out.println(m.contagem(saque));
-                
+                System.out.println(money2_0.contagem(saque));
+                saldo = saldo - saque;
                 System.out.println("Saque de "+ saque +"efetuado"); 
-                
             }
          }else{
             System.out.println("Saldo inferior ao saque");
@@ -47,10 +48,10 @@ public class vitor {
         double sV,dV;
         System.out.println("Bem vindo "+getId()+"\n1 - Saque\n2 - Deposito\n3 - Saldo\n4 - Logout");
         int r = new Scanner(System.in).nextInt();
-        switch (r) {
+       switch (r) {
             case 1:
                 
-                System.out.print("Digite o valor do saque: ");
+                System.out.print("Apenas valores pares\nDigite o valor do saque: ");
                 saque(sV = new Scanner(System.in).nextDouble());
                 //não sabia q podia fazer isso 
             break;
@@ -67,6 +68,7 @@ public class vitor {
                 repet = false;
                 break;
             default:
+            System.out.println("Comando invalido");
                 break;
         }
     }

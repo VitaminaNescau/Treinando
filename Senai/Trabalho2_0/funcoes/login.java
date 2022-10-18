@@ -55,9 +55,9 @@ public class login extends account{
         if (contas.get(4).equals(user)) {
             p.movi();
         }
-        if (contas.get(5).equals(user)) {
+       /*  if (contas.get(5).equals(user)) {
             ad.control();
-        }
+        }*/
        
     }
     

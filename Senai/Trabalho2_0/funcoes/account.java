@@ -11,6 +11,6 @@ public class account {
         contas.add("258369");//2
         contas.add("021003");//3
         contas.add("987654");//4
-        contas.add("123456");//adm é a conta 5
+        //contas.add("123456");//adm é a conta 5
         }
 }
